@@ -1,16 +1,20 @@
 
 import './App.css'
-import {useState} from "react";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import TaskList from "./components/TaskList.jsx";
 
 function App() {
-  const [estado, setEstado] = useState(false);
-    console.log(estado);
+
   return (
     <>
-        <h1 className="text-3xl font-bold bg-cyan-400 text-center p-5">Mi sistema de tareas - Dev Senior Code</h1>
-        <p>{estado ? "Hola, estoy despierto" : "Hola, estoy dormido"}</p>
-        <button className="bg-cyan-200 p-2 rounded m-2 hover:bg-cyan-300" onClick={() => setEstado(!estado)}>Cambiar estado</button>
-
+        <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1 py-8">
+                <TaskList />
+            </main>
+            <Footer />
+        </div>
     </>
   )
 }
