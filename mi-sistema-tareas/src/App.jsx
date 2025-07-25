@@ -7,7 +7,7 @@ import {useState} from "react";
 import AuthPanel from "./components/AuthPanel.jsx";
 
 function App() {
-  const [currentView, setCurrentView] = useState('task');
+  const [currentView, setCurrentView] = useState('auth');
 
   if (currentView === 'auth') {
       return (
