@@ -1,14 +1,11 @@
 import React, {useState} from "react";
 import TaskItem from "./TaskItem.jsx";
+import useTasks from "../hooks/useTasks.js";
 
 const TaskList = () => {
     const FILTERS = ["todas", "pendientes", "completadas"];
-    const [task, setTask] = useState([
-        { id: 1, text: "Realizar ejercicios con React", completed: false, priority: "high" },
-        { id: 2, text: "Actualizar documentación", completed: true, priority: "medium" },
-        { id: 3, text: "Sacar a mi mascota", completed: true, priority: "low" },
-        { id: 4, text: "Revisar codigo hecho en clase", completed: true, priority: "medium" }
-    ])
+    const {task, loading, error, setTask} = useTasks();
+
     const [filter, setFilter] = useState("Todas");
     const filteredTasks = task.filter(task => {
         if (filter === "pendientes") return !task.completed;
