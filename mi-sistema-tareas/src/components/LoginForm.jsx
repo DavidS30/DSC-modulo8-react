@@ -16,7 +16,7 @@ const LoginForm = ({onSwitchToRegister}) => {
                             id="email"
                             type="email"
                             placeholder="Ingresa tu email"
-                            className="w-full appearance-none border border-blue-100 rounded-md"
+                            className="appearance-none border border-blue-100 rounded-md w-full px-3 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
                     <div>
@@ -25,7 +25,7 @@ const LoginForm = ({onSwitchToRegister}) => {
                             id="password"
                             type="password"
                             placeholder="Ingresa tu contraseña"
-                            className=" w-full appearance-none border border-blue-100 rounded-md"
+                            className="appearance-none border border-blue-100 rounded-md w-full px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
@@ -37,7 +37,7 @@ const LoginForm = ({onSwitchToRegister}) => {
                 <div className="mt-4 text-center">
                     <a
                         href="#"
-                        className="text-sm text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300"
+                        className="ml-2 text-blue-600 hover:text-blue-700 font-medium focus:underline transition-colors duration-300"
                     >
                         ¿Olvidaste tu contraseña?
                     </a>
@@ -46,13 +46,13 @@ const LoginForm = ({onSwitchToRegister}) => {
                 <div className="mt-6 text-center">
                     <p className="text-gray-600">
                         ¿No tienes una cuenta?
+                        <button
+                            onClick={onSwitchToRegister}
+                            className="ml-2 text-blue-600 hover:text-blue-700 font-medium focus:underline transition-colors duration-300"
+                        >
+                            Registrarse
+                        </button>
                     </p>
-                    <button
-                        onClick={onSwitchToRegister}
-                        className="text-blue-600 hover:text-blue-700 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300"
-                    >
-                        Registrarse
-                    </button>
                 </div>
             </div>
         </div>

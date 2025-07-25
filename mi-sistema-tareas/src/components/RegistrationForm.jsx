@@ -52,16 +52,16 @@ const RegistrationForm = ({onSwitchToLogin}) => {
                     </button>
                 </form>
 
-                <div className="mt-6 text-center">
+                <div className="mt-6 text-center justify-center">
                     <p className="text-gray-600">
                         ¿Ya tienes una cuenta?
+                        <button
+                            onClick={onSwitchToLogin}
+                            className="ml-2 text-blue-600 hover:text-blue-700 font-medium focus:underline transition-colors duration-300"
+                        >
+                            Iniciar sesión
+                        </button>
                     </p>
-                    <button
-                        onClick={onSwitchToLogin}
-                        className="text-blue-600 hover:text-blue-700 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300"
-                    >
-                        Iniciar sesión
-                    </button>
                 </div>
             </div>
         </div>
